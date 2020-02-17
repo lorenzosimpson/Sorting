@@ -12,12 +12,19 @@ def selection_sort( arr ):
     return arr
 
 
-print(selection_sort([1, 5, 8, 4, 8, 9, 6, 9, 8, 9]))
-
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    swapped = True
+    while swapped == True:
+        swapped = False
+        for i in range(0, len(arr) - 1):
+            for j in range(i + 1, len(arr)):
+                if arr[j] < arr[i]:
+                    arr[j], arr[i] = arr[i], arr[j]
+                else:
+                    swapped = False
     return arr
+
 
 
 # STRETCH: implement the Count Sort function below
